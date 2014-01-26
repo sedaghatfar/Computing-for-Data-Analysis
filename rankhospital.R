@@ -54,7 +54,7 @@ rankhospital <- function(state, outcome, num = "best") {
     if(typeof(num) == "integer" && nrow(ranked.state.data) >= num){
       rankedHospital = ranked.state.data[num, "Hospital.Name"]
     } else {
-      NA
+      print(NA)
     }
   }
   
