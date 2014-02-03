@@ -3,10 +3,12 @@ count <- function(cause = NULL){
   ## Read "homicides.txt" data file
   homidices <- readLines("homicides.txt")
   
-  ## Check that "cause" is non-NULL; else throw error
+  ## Check if "cause" is non-NULL; else throw error
   if (is.null(cause)) stop("cause null")
   
+  # Make cause lower case
   cause <- tolower(cause)
+  
   ## Check that specific "cause" is allowed; else throw error
   causes <- c('asphyxiation', 'blunt force', 'other', 
               'shooting', 'stabbing', 'unknown')
